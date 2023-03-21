@@ -1,0 +1,25 @@
+package food.domain;
+
+import food.domain.*;
+import food.infra.AbstractEvent;
+import java.util.*;
+import lombok.*;
+
+@Data
+@ToString
+public class OrderCanceled extends AbstractEvent {
+
+    private Long id;
+    private String foodid;
+    private Integer qty;
+    private String address;
+    private String orderstatus;
+
+    public OrderCanceled(Order aggregate) {
+        super(aggregate);
+    }
+
+    public OrderCanceled() {
+        super();
+    }
+}
